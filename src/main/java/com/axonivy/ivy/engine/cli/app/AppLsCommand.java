@@ -1,4 +1,4 @@
-package com.axonivy.ivy.engine.cli;
+package com.axonivy.ivy.engine.cli.app;
 
 import java.net.URI;
 import java.net.http.HttpClient;
@@ -16,10 +16,10 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 import picocli.CommandLine.Command;
 
 @Command(
-        name = "apps",
+        name = "ls",
         description = "Prints all applications."
 )
-class ApplicationCommand implements Callable<Integer> {
+public class AppLsCommand implements Callable<Integer> {
 
   @Override
   public Integer call() throws Exception {
